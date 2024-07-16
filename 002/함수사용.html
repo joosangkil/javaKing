@@ -6,22 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #Wind {
+        img {
             width: 400px;
+            height: 400px;
+        }
+
+        .a {
+            font-size: 20px;
+            color: red;
+        }
+
+        .water {
+            color: blue;
+            font-size: 50px;
+            font: small;
+        }
+
+        .ra {
+            color: rgb(255, 0, 255);
+            font-size: 40px;
+        }
+
+        #iddd {
+            color: rgb(255, 174, 0);
+            font-size: 30px;
         }
     </style>
 </head>
 
 <body>
+    <h1>라면만들기</h1>
 
     <div id="Wind">
-
+        <img src="https://media.istockphoto.com/id/1406672650/ko/%EC%82%AC%EC%A7%84/%EC%9D%BC%EB%B3%B8-%ED%86%A4%EC%BD%94%EC%B8%A0-%EB%9D%BC%EB%A9%B4.jpg?s=612x612&w=0&k=20&c=7_h-LkxErWhwhzlGRhI4sRYXnMJWauzSEaBp7cLdScA="
+            alt="">
     </div>
-
+tag
     <script>
+        WaterDrop('<p class=water> 한</p>');
+        WaterDrop(`<strong id="iddd">두두</strong>`);
+        RamenDrop("<strong class=ra>한</strong>")
 
-        function WindStrong() {
-            document.write("windwind");
+        function WaterDrop(pText) {
+            document.write("<p class='a'>물 " + pText + " 바가지!<p>");
+        }
+
+        function RamenDrop(count) {
+            document.write("면 " + count + " 덩어리<br>");
         }
 
     </script>

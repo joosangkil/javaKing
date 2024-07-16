@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2> 원주 :원의 둘레  : 지름 (반지름*2) * 원주율 </h2>
+    <h2> 원의 넓이 :   반지름(세로) *  반지름*원주율 (  가로  )  => 원주율*반지름^2</h2>
+
+    <script>
+
+        /*
+        원의 넓이 구하기 )   지름을 입력받아 원의 넓이를  구하기 
+         원주율:3.14 
+
+        입력 : 지름
+        출력 : 원의 넓이
+
+        처리과정:
+        */
+
+        let diameterNum = Number(prompt("지름을 입력하시오"));
+        let radius = diameterNum/2;
+        const PI = 3.14;
+
+        let result1 = diameterNum / 2 * 2 * PI;
+        let result2 = result1*(radius*radius);
+
+
+        result2 = result2.toFixed(3);
+        document.write("원의 넓이: " + result2 + " m²");
+
+    </script>
+    
+</body>
+</html>

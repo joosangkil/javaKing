@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콜백함수:응용</title>
+</head>
+
+<body>
+
+
+
+  <script>
+    let strSpeakWorld = "WorldSpeak"
+
+
+
+    function callback(func1, func2, func3("str", "num")) {
+
+      alert("start!!");
+      func1();
+      func2();
+      func3("str","num");
+    }
+
+    function testOne() {
+      alert("### testOne");
+    }
+    function testTwo() {
+      alert("### testTwo");
+    }
+
+    let strSpeak = "speakspeak~!!!!";
+    let Num = 33;
+
+
+    function testThree(_strSpeak, _Num) {
+      alert("### testThree");
+      alert(_Num);
+      alert(_strSpeak);
+
+    }
+
+    //QUETION: 콜백함수의 호출순서??///////////////////
+
+    // testThree("ddd", 33);
+
+    // callback(testOne);
+    // callback(testOne, "testTwo_Speaker~~~~");
+    // callback(testOne, testTwo_Speaker);
+    callback(testOne, testTwo, testThree);
+
+
+
+  </script>
+
+</body>
+
+</html>

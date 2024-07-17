@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열매서드1</title>
+</head>
+
+<body>
+
+
+  <h3>배열매서드 사용하기</h3>
+
+  <script>
+    let acornStudents = ["김솔", "김도현", "김무궁", "김세중", "김세현", "김정석", "김채운", "백바울", "소병학", "송수빈", "주상길"];
+
+    //배열 출력하기
+
+    for (let i = 0; i < acornStudents.length; i++) {
+      let student = acornStudents[i];
+      document.write(student + "<br>");
+    }
+
+                          // 콜백함수
+    acornStudents.forEach(function(a, b){
+      console.log("이름" + a + "index" + b);
+
+    });
+
+    
+
+
+  </script>
+</body>
+
+</html>

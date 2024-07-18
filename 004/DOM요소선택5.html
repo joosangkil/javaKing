@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM요소선택</title>
+
+    <script>
+        function loginCheck() {
+
+            let frm = document.frm;
+            //let frm = document.forms[0]; 
+
+            
+            let useridE = document.frm.userid;
+            // let useridE = frm.elements[0];
+            let userid = useridE.value;
+
+            let userpwE = document.frm.userpw;
+            let userpw = userpwE.value;
+
+
+            if (userid == "") {
+                alert("아이디 입력하라");
+                useridE.focus();
+            } else if (userpw == "") {
+                alert("비번 입력하라");
+                userpwE.focus();
+            } else {
+                alert("로그인 중이다");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+
+
+    <form name="frm" action="/login" method="post">
+        <input type="text" name="userid">
+        <input type="text" name="userpw">
+
+        <button type="button" onclick="loginCheck()">로그인</button>
+    </form>
+
+</body>
+
+</html>

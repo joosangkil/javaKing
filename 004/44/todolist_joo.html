@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>투두리스트</title>
+
+    <style>
+        h2 {
+            
+        }
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        #wrapBox {
+            width: 400px;
+            height: 600px;
+            background-color: rgb(226, 239, 244);
+            box-shadow: 0px 1px 20px gray;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            width: 380px;
+            height: 100px;
+            background-color: lightyellow;
+            border-radius: 10px;
+            border: 1px solid red;
+
+            margin-top: 30px;
+            margin-bottom: 0px;
+        }
+
+        #workText {
+            width: 300px;
+            height: 50px;
+            margin-top: 0px;
+        }
+
+        #date {
+            margin-top: 0px;
+        }
+
+        #enter {
+            width: 60px;
+            height: 54px;
+        }
+
+        main {
+            width: 380px;
+            height: 300px;
+            border: 1px solid red;
+            border-radius: 10px;
+            background-color: whitesmoke;
+        }
+    </style>
+
+    <script>
+        let toDay = new Date();
+        let dateYear = toDay.getFullYear();
+        let dateMonth = toDay.getMonth();
+        dateMonth++;
+        let dateDay = toDay.getDate();
+        let strDate = dateYear + " - " + dateMonth + " - " + dateDay;
+        strDate.fontsize(30);
+
+        function CheckDate() {
+            let boxx = document.getElementById("date");
+            boxx.style.textAlign = "center";
+            boxx.innerHTML = "test(2): " + strDate;
+
+            console.log("실행: CheckDate()");
+        }
+
+        function addList() {
+            let llist = document.getElementById("list");
+            let one = document.createElement("li");
+
+            console.log("실행: addList()");
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrapBox">
+        <h2>TODO-LIST</h2>
+        <div>
+            <header id="dateBox" onmouseover="CheckDate()">
+                <!-- yyyy-mm-dd -->
+                <h1>오늘은?</h1>
+                <p id="date"></p>
+            </header>
+            <div>
+                <h4>새로운 To-do 작성하기</h4>
+                <input type="text" id="workText" placeholder=" 할일을 입력하세요.">
+                <button id="enter" onclick="addList()">확인</button>
+            </div>
+            <hr>
+            <main>
+                <ul id="list">
+                </ul>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

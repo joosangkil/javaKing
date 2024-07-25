@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 1200px;
+            height: 800px;
+            /* 나중에 제거해야 함 (임의로 보기 위함)) */
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        header {
+            border: 1px solid red;
+            height: 100px;
+            background-color: pink;
+        }
+
+        nav {
+            height: 60px;
+            border: 1px solid red;
+        }
+
+        section {
+            height: 400px;
+            background-color: aqua;
+        }
+
+        footer {
+            height: 100px;
+            background-color: violet;
+
+            /*   */
+            display: flex;
+        }
+        footer > div{
+            width: 33.3%;
+            border: 1px solid blue;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <header></header>
+
+        <nav></nav>
+
+        <section></section>
+
+        <footer>
+            <div>a</div>
+            <div>b</div>
+            <div>c</div>
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>
